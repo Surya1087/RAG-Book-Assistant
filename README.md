@@ -86,26 +86,11 @@ The application uses **local Hugging Face embeddings** to create a vector databa
 RAG-Book-Assistant/
 ├── app.py
 ├── main.py
-├── create_database.py
 ├── requirements.txt
 ├── pyproject.toml
 ├── uv.lock
 ├── README.md
 ├── .gitignore
-│
-├── document loaders/
-│   ├── notes.txt
-│   ├── page.py
-│   ├── pdf.py
-│   └── test.py
-│
-├── retrievers/
-│   ├── arixv.py
-│   ├── mmr.py
-│   └── multiquery.py
-│
-├── vector store/
-│   └── DB.py
 │
 └── src/
     └── genai_part2_rag_implementation/
@@ -116,7 +101,7 @@ RAG-Book-Assistant/
 git clone https://github.com/Surya1087/RAG-Book-Assistant.git
 cd RAG-Book-Assistant
 
-3. Create a virtual environment
+2. Create a virtual environment
 Using uv:
 uv venv
 Activate it:
@@ -125,7 +110,7 @@ source .venv/bin/activate
 Windows
 .venv\Scripts\activate
 
-5. Install dependencies
+3. Install dependencies
 uv sync
 
 🔑 Environment Variables
@@ -206,6 +191,8 @@ chroma_db/
 processed_files.json
 __pycache__/
 .streamlit/secrets.toml
+
+The local vector database and processed-file registry are created automatically when the application is used for the first time.
 
 🔄 RAG Workflow
 PDF
