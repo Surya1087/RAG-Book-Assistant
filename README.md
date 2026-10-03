@@ -87,8 +87,6 @@ RAG-Book-Assistant/
 ├── app.py
 ├── main.py
 ├── requirements.txt
-├── pyproject.toml
-├── uv.lock
 ├── README.md
 ├── .gitignore
 │
@@ -102,8 +100,7 @@ git clone https://github.com/Surya1087/RAG-Book-Assistant.git
 cd RAG-Book-Assistant
 
 2. Create a virtual environment
-Using uv:
-uv venv
+python3 -m venv .venv
 Activate it:
 macOS / Linux
 source .venv/bin/activate
@@ -111,7 +108,7 @@ Windows
 .venv\Scripts\activate
 
 3. Install dependencies
-uv sync
+pip install -r requirements.txt
 
 🔑 Environment Variables
 Create a .env file in the project root:
@@ -120,7 +117,7 @@ The .env file is intentionally excluded from Git using .gitignore.
 
 ▶️ Run the Application
 Start the Streamlit application:
-uv run streamlit run app.py
+streamlit run app.py
 Streamlit will provide a local URL in the terminal.
 Open the URL in your browser.
 
