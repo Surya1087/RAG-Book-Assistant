@@ -242,6 +242,10 @@ if uploaded_file:
 # LOAD VECTOR DATABASE
 # ============================================================
 
+# No document is indexed on the first visit, so the chat input does not exist yet.
+# Initialise it before the database check to avoid referencing an undefined variable.
+query = None
+
 if os.path.exists("chroma_db"):
 
     vectorstore = Chroma(
