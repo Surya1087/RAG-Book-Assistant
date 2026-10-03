@@ -23,6 +23,7 @@ sentence-transformers
 # Document Loaders dependencies
 
 pypdf
+fonttools
 unstructured
 beautifulsoup4
 lxml
